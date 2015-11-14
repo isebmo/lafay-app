@@ -1,0 +1,59 @@
+<section id="dashboard-view" class="mainbar">
+    <section class="matter">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <ul class="today-datas">
+                        <li class="bred">
+                            <div class="pull-left"><i class="fa fa-lightbulb-o"></i></div>
+                            <div class="datas-text pull-right">
+                                <a href="http://www.soprasteria.com" target="_blank"><span class="bold">OIA</span></a>
+                            </div>
+                            <div class="clearfix"></div>
+                        </li>
+
+                        <li class="borange">
+                            <div class="pull-left"><i class="fa fa-users"></i></div>
+                            <div class="datas-text pull-right">
+                                <span class="bold">{{vm.customers.length}}</span> Clients
+                            </div>
+                            <div class="clearfix"></div>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                    <div class="widget wblue">
+                        <div ht-widget-header title="Clients"
+                             allow-collapse="true"></div>
+                        <div class="widget-content text-center text-info">
+                            <div class="container">
+                                 <ul class="row image-group">
+                                      <li ng-repeat="c in vm.customers | limitTo:12 | orderBy:'name'"
+                                        ng-click="vm.gotoCustomer(c)"
+                                        class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
+                                        <div class="user" title="Voir le détail">
+                                            <img ht-img-person="{{c.thumbnail}}"
+                                                class="img-thumbnail stacked">
+                                            <div>
+                                                <small>{{c.firstName}}</small>
+                                            </div>
+                                            <div>
+                                                <small>{{c.lastName}}</small>
+                                            </div>
+                                        </div>
+
+                                      </li>
+                                 </ul>
+                            </div>
+                        </div>
+                        <div class="widget-foot">
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>
