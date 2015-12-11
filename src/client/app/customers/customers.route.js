@@ -27,11 +27,7 @@
                     templateUrl: 'app/customers/customers.html',
                     controller: 'Customers',
                     controllerAs: 'vm',
-                    title: 'Clients',
-                    settings: {
-                        nav: 2,
-                        content: '<i class="fa fa-group"></i> Clients'
-                    }
+                    params: {title: 'Clients'}
                 }
             },
             {
@@ -41,7 +37,7 @@
                     templateUrl: 'app/customers/customer-detail.html',
                     controller: 'CustomerDetail',
                     controllerAs: 'vm',
-                    title: 'Editer le client'
+                    params: {title: 'Clients'}
                 }
             }
         ];

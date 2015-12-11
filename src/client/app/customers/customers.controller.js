@@ -6,11 +6,11 @@
         .controller('Customers', Customers);
 
     /* @ngInject */
-    function Customers($state, dataservice, logger) {
+    function Customers($state, dataservice, $stateParams) {
         var vm = this;
         vm.customers = [];
         vm.gotoCustomer = gotoCustomer;
-        vm.title = 'Clients';
+        vm.title = $stateParams.title;
 
         activate();
 
